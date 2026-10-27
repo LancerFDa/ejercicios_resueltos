@@ -16,7 +16,7 @@ def calcular_cambio(pago):
 
     numero_monedas = [0,0,0]
 
-    if pago == 0:
+    if pago <= 0:
         return numero_monedas
 
     tipo_moneda = [5,2,1]
@@ -44,5 +44,8 @@ assert calcular_cambio(5) == [1,0,0]
 #>>> (5, 2, 0)  # cinco de 5 cénts, dos de 2 cénts y ninguna de 1 cént.
 print(calcular_cambio(0))
 assert calcular_cambio(0) == [0,0,0]
+
+print(calcular_cambio(-1))
+assert calcular_cambio(-1) == [0,0,0]
 
 #>>> (0, 0, 0) # ninguna de 5 cénts, ninguna de 2 cénts y 1 de cénts.
