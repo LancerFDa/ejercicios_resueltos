@@ -14,6 +14,8 @@ de 5 cénts posible, luego de 2 y finalmente de 1 (para sumar el total)
 
 def calcular_cambio(pago):
 
+    assert isinstance(pago, int), "Error: el pago deber ser un numero entero"
+
     numero_monedas = [0,0,0]
 
     if pago <= 0:
@@ -31,6 +33,7 @@ def calcular_cambio(pago):
             break
         else:
             moneda_index += 1
+            assert moneda_index < len(tipo_moneda), "Error: No hay más tipos de monedas"
     return numero_monedas
         
 
